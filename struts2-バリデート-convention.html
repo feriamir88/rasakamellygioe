@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-guide-6.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>Struts2 バリデート Convention</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "Struts2 バリデート Convention",
+  "datePublished": "2021-04-27",
+  "image": [https://i.stack.imgur.com/l2rUp.png,https://i1.wp.com/www.dineshonjava.com/wp-content/uploads/2013/07/777.png?w=530&amp;ssl=1,https://www.viralpatel.net/app/uploads/2009/12/customer-page-success.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=struts2 バリデート convention",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Head tag Code -->	</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd232bd6e1c0d85f8dc8c8119bc5f5a1e',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://magnificentmanlyyeast.com/d232bd6e1c0d85f8dc8c8119bc5f5a1e/invoke.js"></scr' + 'ipt>');
+</script></center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>Struts2 バリデート Convention</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-success" href="/%E5%AD%A6%E6%A0%A1%E3%81%AE%E6%80%AA%E8%AB%87-%E8%B5%B0%E3%82%8B%E4%BA%BA%E4%BD%93%E4%BA%BA%E5%BD%A2.html">学校の怪談 走る人体人形</a>
+											<a class="badge badge-primary" href="/%E5%B9%BB%E6%83%B3%E4%BA%BA%E5%BD%A2%E6%BC%94%E8%88%9E-%E3%83%A6%E3%83%A1%E3%83%8E%E3%82%AB%E3%82%B1%E3%83%A9%E5%A6%B9%E7%B4%85%E5%AF%BE%E6%88%A6.html">幻想人形演舞 ユメノカケラ妹紅対戦</a>
+											<a class="badge badge-dark" href="/mct055%E7%A7%98%E5%AF%86%E3%81%AE1%E6%97%A5%E3%83%87%E3%83%BC%E3%83%88.html">mct055秘密の1日デート</a>
+											<a class="badge badge-dark" href="/%E5%BD%BC%E6%B0%8F-%E3%81%8C-%E3%81%84%E3%82%8B-%E3%81%AE-%E3%81%AB-%E3%83%87%E3%83%BC%E3%83%88-%E3%81%99%E3%82%8B-%E5%A5%B3.html">彼氏 が いる の に デート する 女</a>
+											<a class="badge badge-secondary" href="/%E5%A4%A7%E9%98%AA-%E3%83%87%E3%83%BC%E3%83%88-2-%E6%9C%88.html">大阪 デート 2 月</a>
+											<a class="badge badge-success" href="/%E5%90%8D%E5%8F%A4%E5%B1%8B-%E5%A4%9C-%E3%81%94%E9%A3%AF-%E3%83%87%E3%83%BC%E3%83%88-%E9%AB%98%E6%A0%A1%E7%94%9F.html">名古屋 夜 ご飯 デート 高校生</a>
+											<a class="badge badge-info" href="/%E7%90%83%E4%BD%93%E9%96%A2%E7%AF%80-%E5%89%B5%E4%BD%9C%E4%BA%BA%E5%BD%A2-%E7%BE%8E%E5%B0%91%E5%A5%B3.html">球体関節 創作人形 美少女</a>
+											<a class="badge badge-light" href="/%E5%B1%B1%E5%8F%A3%E3%83%A6%E3%82%AD%E3%83%92%E3%83%AD%E9%99%B6%E4%BA%BA%E5%BD%A2.html">山口ユキヒロ陶人形</a>
+											<a class="badge badge-danger" href="/mct-048-%E7%A7%98%E5%AF%86%E3%81%AE1%E6%97%A5%E3%83%87%E3%83%BC%E3%83%88-8-%E3%81%8B%E3%81%AA%E3%81%A7%E8%87%AA%E7%94%B1.html">mct 048 秘密の1日デート 8 かなで自由</a>
+											<a class="badge badge-secondary" href="/%E4%BB%98%E3%81%8D%E5%90%88%E3%81%86-%E5%89%8D-%E3%83%87%E3%83%BC%E3%83%88-%E4%BA%8C-%E5%9B%9E%E7%9B%AE.html">付き合う 前 デート 二 回目</a>
+											<a class="badge badge-info" href="/fate-pixiv-%E6%BC%AB%E7%94%BB-%E9%87%91%E5%89%A3-%E3%83%87%E3%83%BC%E3%83%88.html">fate pixiv 漫画 金剣 デート</a>
+											<a class="badge badge-secondary" href="/%E5%AE%89%E8%97%A4%E4%BA%BA%E5%BD%A2%E5%BA%97-%E9%A7%90%E8%BB%8A%E5%A0%B4.html">安藤人形店 駐車場</a>
+											<a class="badge badge-secondary" href="/30-%E4%BB%A3-%E3%83%87%E3%82%A3%E3%83%8A%E3%83%BC-%E3%83%87%E3%83%BC%E3%83%88.html">30 代 ディナー デート</a>
+											<a class="badge badge-info" href="/8%E6%AD%B3%E3%81%AE%E6%A5%B5%E3%83%AD%E3%83%AA%E5%A5%B3%E5%AD%90%E5%A4%A7%E7%94%9F%E3%81%A8%E5%88%B6%E6%9C%8D%E3%83%87%E3%83%BC%E3%83%88.html">8歳の極ロリ女子大生と制服デート</a>
+											<a class="badge badge-primary" href="/%E3%81%93%E3%81%AF%E3%82%8B%E3%81%A1%E3%82%83%E3%82%93-%E5%85%AC%E5%9C%92%E3%83%87%E3%83%BC%E3%83%88.html">こはるちゃん 公園デート</a>
+						</div>
+<center>
+	<script type="text/javascript">
+	atOptions = {
+		'key' : 'a7e6ae4bcf1c49afa3b184d0c694ad6c',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://magnificentmanlyyeast.com/a7e6ae4bcf1c49afa3b184d0c694ad6c/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/www.dineshonjava.com/wp-content/uploads/2013/07/777.png?w=530&amp;ssl=1" data-lightbox="roadtrip" data-title="Struts2 Validation With Example Dinesh On Java">
+						<img class="card-img" src="https://i1.wp.com/www.dineshonjava.com/wp-content/uploads/2013/07/777.png?w=530&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1nliAiwtZnTvwcBvGaarFiSRw1Cyk6BYKEZmpMyXhObXreT7FEMeJcuXB_lyLnIlDwzo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation With Example Dinesh On Java
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.javatips.net/static/images/struts2-validation-error.png" data-lightbox="roadtrip" data-title="Struts 2 Validation Using Annotation">
+						<img class="card-img" src="https://www.javatips.net/static/images/struts2-validation-error.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZz3eYkbl2zoaapOgEQEk0WIw7KlphpepOD0dXNFiQq9Gaq3TJ-dG9pfiplRCv2BqmvI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Validation Using Annotation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.viralpatel.net/app/uploads/2009/12/customer-page-validation-errors.png" data-lightbox="roadtrip" data-title="Struts2 Validation Framework Tutorial With Example Struts2 Validators">
+						<img class="card-img" src="https://www.viralpatel.net/app/uploads/2009/12/customer-page-validation-errors.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGD8ac928MhIUu7u6ZdilBSdFOETRsq8MzJNMka61QttH8w0hCzsjnzLLqsCW91g7Aw0Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation Framework Tutorial With Example Struts2 Validators
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.viralpatel.net/app/uploads/2009/12/struts2-validation-framework.png" data-lightbox="roadtrip" data-title="Struts2 Validation Framework Tutorial With Example Struts2 Validators">
+						<img class="card-img" src="https://www.viralpatel.net/app/uploads/2009/12/struts2-validation-framework.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6ZkFQt84st2pZDyPSTy7BL7RqVGRhH9_W33HzYdBPkwblLCxVbU0wen3OuD7HvFUhw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation Framework Tutorial With Example Struts2 Validators
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-annotations/Test%20Struts2%20form%20validation%20using%20annotations%20-%20fields%20empty.png" data-lightbox="roadtrip" data-title="Struts Form Validation Tutorial Annotations">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-annotations/Test%20Struts2%20form%20validation%20using%20annotations%20-%20fields%20empty.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFvXsTWRWwotVO3s5aqV9O1k4fymL8MQhfvrOnmJ662Yp4jiY-jMV_IMDDB1gbkMLt9oQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Form Validation Tutorial Annotations
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.javatips.net/static/images/struts2-validation-annotation-structure.png" data-lightbox="roadtrip" data-title="Struts 2 Validation Using Annotation">
+						<img class="card-img" src="https://www.javatips.net/static/images/struts2-validation-annotation-structure.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfteJK_IW_4JEX-jkJKc0T1b_kM3qClxF0fU-vM3fU85UiGwIxT929VRPceau83EkZlSs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Validation Using Annotation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-architecture-guide-1.jpg" data-lightbox="roadtrip" data-title="Struts Validation Example Examples Java Code Geeks 2021">
+						<img class="card-img" src="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-architecture-guide-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavg13wm5zkFIS8BKuEGBzmVdmzo1fcNKEk7WMG2Xw3BVg2g-xBiPT85Irsbg6cmq4tQA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Validation Example Examples Java Code Geeks 2021
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-xml/Struts2%20Validation%20Basic%20XML%20project%20structure%20in%20Eclipse.png" data-lightbox="roadtrip" data-title="Struts Form Validation Tutorial Xml">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-xml/Struts2%20Validation%20Basic%20XML%20project%20structure%20in%20Eclipse.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-umxsAxNjacBUku9p8-p2syg-TfJweGnKhBRicJ74iEBjiq3t4VUSMnvsfEZ4grjTGzk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Form Validation Tutorial Xml
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.w3spoint.com/wp-content/uploads/2014/10/struts-22-login.jpg" data-lightbox="roadtrip" data-title="Url Validator In Struts2 W3spoint">
+						<img class="card-img" src="https://www.w3spoint.com/wp-content/uploads/2014/10/struts-22-login.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRtXO4pgK7IV_moaR0l8f-cD7QMmDtZCy5BP5zMcmEL-7y3gBiiB_pZ_yIiKa_t-Qahqs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Url Validator In Struts2 W3spoint
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.concretepage.com/struts-2/images/struts-2-validation-annotation-example-3.jpg" data-lightbox="roadtrip" data-title="Struts 2 Validation Annotation Example">
+						<img class="card-img" src="https://www.concretepage.com/struts-2/images/struts-2-validation-annotation-example-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxOy9uRwqNaVtpF14MwYPTv_9m2NqUmjy4azJyNaYY-__MEXcsJdvOHg0luXIdXLhA_aQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Validation Annotation Example
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://static.javatpoint.com/images/st/customvalidationoutput1.jpg" data-lightbox="roadtrip" data-title="Struts 2 Custom Validation Workflow Interceptor Javatpoint">
+						<img class="card-img" src="https://static.javatpoint.com/images/st/customvalidationoutput1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuRjMlYDt-jWOSxLI0DBQHJwx4Qou-f1vd7MY3y-eXa3QOmHeEsmEHzOtjo8aFH8APxFM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Custom Validation Workflow Interceptor Javatpoint
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-xml/Test%20struts2%20form%20validation%20-%20error%201.png" data-lightbox="roadtrip" data-title="Struts Form Validation Tutorial Xml">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-xml/Test%20struts2%20form%20validation%20-%20error%201.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY53RhrOGHy--WHqvEFEqc1UsBTK8UYwuCnac3npE2UhQ8S458L6ZxfH7UugfcNXgekBs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Form Validation Tutorial Xml
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.viralpatel.net/app/uploads/2009/12/struts2-validation-xml.png" data-lightbox="roadtrip" data-title="Struts2 Validation Framework Tutorial With Example Struts2 Validators">
+						<img class="card-img" src="https://www.viralpatel.net/app/uploads/2009/12/struts2-validation-xml.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5rKWyZe8mGen5FsHDQkwZTySD354YaAH6REXHZ17TpypA10TzS7CzRbzBShw5j9lykg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation Framework Tutorial With Example Struts2 Validators
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/javahonk.com/wp-content/uploads/2014/08/7.png" data-lightbox="roadtrip" data-title="Struts 2 Form Validation Using Annotation Maven Eclipse">
+						<img class="card-img" src="https://i1.wp.com/javahonk.com/wp-content/uploads/2014/08/7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyk2eBlSJ1gE0oUu_dftvSMdT7Yo_YkVJyHgsjAx3WxvdI6lI1tvLQTuWbIeGlw_U4AE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Form Validation Using Annotation Maven Eclipse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.javatips.net/static/images/struts.png" data-lightbox="roadtrip" data-title="Struts 2 Validation Using Annotation">
+						<img class="card-img" src="https://www.javatips.net/static/images/struts.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTltU9xTdGVmVoUBhk6GvN8rmqbzHFFcGR-9RwJNmCh-mE16AeOdFw_uZmQe5SdkxRI-VE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Validation Using Annotation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-structure-guide-1.jpg" data-lightbox="roadtrip" data-title="Struts Validation Example Examples Java Code Geeks 2021">
+						<img class="card-img" src="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-structure-guide-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF9YQvedd6lgBNAG8rl1sSszRlCy0_4nBUFhr8NL9VxIn103kVzBOrM3YCNlu1bZ09DH4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Validation Example Examples Java Code Geeks 2021
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://struts.apache.org/plugins/json/struts2-ajax-vali-flow.png" data-lightbox="roadtrip" data-title="Json Ajax Validation">
+						<img class="card-img" src="https://struts.apache.org/plugins/json/struts2-ajax-vali-flow.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5ZVMmmVH9LuJoyK1jt3N4GDnV_SPs2csMnZzt4zuowHn2ykVja54izhXcH_BhkF831Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Json Ajax Validation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-annotations/Struts2%20Form%20Validation%20Annotations%20Eclipse%20project.png" data-lightbox="roadtrip" data-title="Struts Form Validation Tutorial Annotations">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/struts/validation-basic-annotations/Struts2%20Form%20Validation%20Annotations%20Eclipse%20project.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrUpflGHb-snIJJtMCAJgoiRwh7oAjXH6dxblKHoR8mOzUlPRb4eNe311CngfCm4XKqlI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Form Validation Tutorial Annotations
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.stack.imgur.com/HrhJo.png" data-lightbox="roadtrip" data-title="Severe Unable To Read Class Struts2 Annotations Stack Overflow">
+						<img class="card-img" src="https://i.stack.imgur.com/HrhJo.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2E6OSN0ABY4bSsnKKcyje1ENA5BBpLqPe3SvF9xnYQ_y_aRSnRNdvHL7RdMcGYYYBFLE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Severe Unable To Read Class Struts2 Annotations Stack Overflow
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.slidesharecdn.com/ss_thumbnails/rc020-010d-struts20-100503130615-phpapp02-thumbnail-4.jpg?cb=1337058919" data-lightbox="roadtrip" data-title="Dzone Struts2 Reference Card">
+						<img class="card-img" src="https://cdn.slidesharecdn.com/ss_thumbnails/rc020-010d-struts20-100503130615-phpapp02-thumbnail-4.jpg?cb=1337058919" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzVVL23O4zvWUMTw2w_RL0e3bnlB6Q4DvEj-F9mEuDb3d7AdmzU1hbNyTsCzEj_8iqclk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dzone Struts2 Reference Card
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/Struts%202/Introduction%20to%20Struts%202%20Framework/2.1%20Struts%202%20Architecture.jpg" data-lightbox="roadtrip" data-title="Introduction To Struts Framework">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/Struts%202/Introduction%20to%20Struts%202%20Framework/2.1%20Struts%202%20Architecture.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ws0TD3ArTWF7pAPwDlqNTXshqc4tLpeEng';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Introduction To Struts Framework
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.journaldev.com/wp-content/uploads/2013/09/struts2-no-result-defined-for-action-and-result-input.png" data-lightbox="roadtrip" data-title="Struts 2 No Result Defined For Action And Result Input Journaldev">
+						<img class="card-img" src="https://cdn.journaldev.com/wp-content/uploads/2013/09/struts2-no-result-defined-for-action-and-result-input.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStXRarjkbedCuJ2ouO1ljfSdwtAybtRahiTA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 No Result Defined For Action And Result Input Journaldev
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.codejava.net/images/articles/frameworks/struts/form-handling/Struts2%20Form%20Handling%20Method.png" data-lightbox="roadtrip" data-title="Struts Form Handling Tutorial">
+						<img class="card-img" src="https://www.codejava.net/images/articles/frameworks/struts/form-handling/Struts2%20Form%20Handling%20Method.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNF5s-ajptw_8WHnf6oYbXC0h_k2NL42KaOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Form Handling Tutorial
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.journaldev.com/wp-content/uploads/2013/09/Struts-2-Architecture-Diagram.png" data-lightbox="roadtrip" data-title="Struts Tutorial For Beginners Journaldev">
+						<img class="card-img" src="https://cdn.journaldev.com/wp-content/uploads/2013/09/Struts-2-Architecture-Diagram.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYCHWACuvuVyZiIWmJ5AZKHpXUMFgx2SUig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Tutorial For Beginners Journaldev
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://learningprogramming.net/wp-content/uploads/java/struts_2/project1.png" data-lightbox="roadtrip" data-title="Html 5 Forms Validation In Struts 2 Learn Programming With Real Apps">
+						<img class="card-img" src="http://learningprogramming.net/wp-content/uploads/java/struts_2/project1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_oVz94Q3uZSUd8f_eAfqcTIInwySURtQQQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Html 5 Forms Validation In Struts 2 Learn Programming With Real Apps
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.concretepage.com/struts-2/images/struts-2-validation-annotation-example-1.jpg" data-lightbox="roadtrip" data-title="Struts 2 Validation Annotation Example">
+						<img class="card-img" src="https://www.concretepage.com/struts-2/images/struts-2-validation-annotation-example-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaf_hSuJQzSdkR-sFwRrxCHS65kpNtTzoPlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Validation Annotation Example
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.viralpatel.net/app/uploads/2009/12/customer-page-success.png" data-lightbox="roadtrip" data-title="Struts2 Validation Framework Tutorial With Example Struts2 Validators">
+						<img class="card-img" src="https://www.viralpatel.net/app/uploads/2009/12/customer-page-success.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgAzL27hDLT8_9AqBCBqrzTy6xAVDrsHAjJg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation Framework Tutorial With Example Struts2 Validators
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.tutorialspoint.com/struts_2/images/struts_2_architecture.gif" data-lightbox="roadtrip" data-title="Struts 2 Quick Guide Tutorialspoint">
+						<img class="card-img" src="https://www.tutorialspoint.com/struts_2/images/struts_2_architecture.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6WiesV9cRuin5c6oUSDuH6wwDp7A7UQSNzQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Quick Guide Tutorialspoint
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.programmersought.com/images/428/6b805524088e008413fee5688eeb2a14.png" data-lightbox="roadtrip" data-title="Struts2 Form Data Validation Programmer Sought">
+						<img class="card-img" src="https://www.programmersought.com/images/428/6b805524088e008413fee5688eeb2a14.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0dHW_pUUtZdo2hIt_fsV0JC9jZAxeA9FHAQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Form Data Validation Programmer Sought
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/www.dineshonjava.com/wp-content/uploads/2013/07/66666.png?w=530&amp;ssl=1" data-lightbox="roadtrip" data-title="Struts2 Validation With Example Dinesh On Java">
+						<img class="card-img" src="https://i2.wp.com/www.dineshonjava.com/wp-content/uploads/2013/07/66666.png?w=530&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa5yaCjS2f697NJBGrJnjJuYutCZRyjl9B9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts2 Validation With Example Dinesh On Java
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.stack.imgur.com/l2rUp.png" data-lightbox="roadtrip" data-title="Data Validate In Struts 2 Annotiation Model Driven Stack Overflow">
+						<img class="card-img" src="https://i.stack.imgur.com/l2rUp.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5wFX-fJDdHqxQJnjx4zxSD_tlpH-YjuN3pg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Data Validate In Struts 2 Annotiation Model Driven Stack Overflow
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.journaldev.com/wp-content/uploads/2013/09/Struts2-action-modeldriven-project.png" data-lightbox="roadtrip" data-title="Struts 2 Action Object Backed And Modeldriven Example Journaldev">
+						<img class="card-img" src="https://cdn.journaldev.com/wp-content/uploads/2013/09/Struts2-action-modeldriven-project.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz-deo_NMDNbnxdMMro3k27DgczYIRRQ0Lfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts 2 Action Object Backed And Modeldriven Example Journaldev
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-guide-6.jpg" data-lightbox="roadtrip" data-title="Struts Validation Example Examples Java Code Geeks 2021">
+						<img class="card-img" src="https://examples.javacodegeeks.com/wp-content/uploads/2017/09/struts2-validation-example-project-guide-6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEYYijggtPR3zXU_FpOSoSDeide3u7mfC_w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Struts Validation Example Examples Java Code Geeks 2021
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		<div class="d-block mt-4 p-3">
+
+			Source : <a href="https://pinterest.com" rel="nofollow noopener">pinterest.com</a>
+		</div>
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			</body>
+</html>

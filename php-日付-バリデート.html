@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://stat.ameba.jp/user_images/20130327/04/dantiv/17/af/j/o0567020212474970097.jpg?caw=800
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>Php 日付 バリデート</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "Php 日付 バリデート",
+  "datePublished": "2021-04-27",
+  "image": [https://pisuke-code.com/wp-content/uploads/2018/08/php.png,https://camo.qiitausercontent.com/2466c5527e7659f865e92ab953ec20f868dae6d0/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3130383334352f65336565303030652d343263342d646139322d376232382d3731626630646131333563612e706e67,https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3DLaravel5.2%2520%25E6%2597%25A5%25E4%25BB%2598Validation%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Dd5b7bc28e772e6be58cf7a91e31e5fd0&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540ProjectEuropa%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D10c954c8c0f83b3b7af6f8bc345ae1d2&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=156f6e813c67cb961c88c070a2c0c55d],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=php 日付 バリデート",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Head tag Code -->	</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd232bd6e1c0d85f8dc8c8119bc5f5a1e',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://magnificentmanlyyeast.com/d232bd6e1c0d85f8dc8c8119bc5f5a1e/invoke.js"></scr' + 'ipt>');
+</script></center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>Php 日付 バリデート</h1>
+
+	
+	<div class="navi text-center">
+					<p>If the Joomla site is installed within a folder such as at eg. フィールドがdns_get_record PHP関数により有効なAかAAAAレコードであることをバリデートします after日付 フィールドの値が与えられた日付. デートコース 本指名のお客様限定CASTとのデートコース可能です 他イベントの併用は不可となります 受付時に必ずイベント名をお伝えください 申告制の為ご申告が無い場合は適用出来かねますのでご了承くださいませ. <br>				
+			</p>
+										<a class="badge badge-dark" href="/%E9%87%91%E5%B1%B1-%E9%8D%8B-%E5%80%8B%E5%AE%A4-%E3%83%87%E3%83%BC%E3%83%88.html">金山 鍋 個室 デート</a>
+											<a class="badge badge-info" href="/%E6%96%B0%E5%AE%BF-%E9%AB%98%E7%B4%9A-%E3%83%87%E3%82%A3%E3%83%8A%E3%83%BC-%E3%83%87%E3%83%BC%E3%83%88.html">新宿 高級 ディナー デート</a>
+											<a class="badge badge-primary" href="/%E6%A8%B9%E8%84%82%E4%BA%BA%E5%BD%A2-%E6%B0%B4%E6%A7%BD%E3%81%AB%E3%81%84%E3%82%8C%E3%81%A6%E3%82%82%E3%81%84%E3%81%84.html">樹脂人形 水槽にいれてもいい</a>
+											<a class="badge badge-danger" href="/38%E6%AD%B3-%E5%A5%B3%E6%80%A7-%E3%83%87%E3%83%BC%E3%83%88.html">38歳 女性 デート</a>
+											<a class="badge badge-primary" href="/%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE-%E5%AF%BF%E5%8F%B8-%E5%80%8B%E5%AE%A4-%E3%83%87%E3%83%BC%E3%83%88.html">すすきの 寿司 個室 デート</a>
+											<a class="badge badge-warning" href="/2%E5%9B%9E%E7%9B%AE-%E3%83%87%E3%83%BC%E3%83%88-%E9%80%A3%E7%B5%A1%E3%81%AA%E3%81%84.html">2回目 デート 連絡ない</a>
+											<a class="badge badge-primary" href="/%E5%B9%BB%E6%83%B3%E4%BA%BA%E5%BD%A2%E6%BC%94%E8%88%9E-%E5%85%88%E4%BB%A3.html">幻想人形演舞 先代</a>
+											<a class="badge badge-dark" href="/%E6%96%B0%E5%AE%BF-%E6%98%A0%E7%94%BB-%E9%A4%A8-%E3%81%8A%E3%81%99%E3%81%99%E3%82%81-%E3%83%87%E3%83%BC%E3%83%88.html">新宿 映画 館 おすすめ デート</a>
+											<a class="badge badge-info" href="/%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF-%E4%BA%BA%E5%BD%A2%E5%B0%8F%E5%89%A7%E5%9C%BA-wiki.html">少女前线 人形小剧场 wiki</a>
+											<a class="badge badge-dark" href="/%E3%83%87%E3%83%BC%E3%83%88-5-%E5%9B%9E%E7%9B%AE-%E3%83%9B%E3%83%86%E3%83%AB.html">デート 5 回目 ホテル</a>
+											<a class="badge badge-success" href="/111616_003-%E4%BA%BA%E5%A6%BB%E4%B8%8D%E5%80%AB%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%83%87%E3%83%BC%E3%83%88-%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AB%E4%BC%9A%E3%81%86%E3%81%AE%E3%81%8C%E5%BE%85%E3%81%A1%E9%81%A0%E3%81%97%E3%81%8F%E3%81%A6.html">111616_003 人妻不倫ドライブデート あなたに会うのが待ち遠しくて</a>
+											<a class="badge badge-primary" href="/%E4%B8%8A%E9%87%8E-%E5%80%8B%E5%AE%A4-%E3%83%A9%E3%83%B3%E3%83%81-%E3%83%87%E3%83%BC%E3%83%88.html">上野 個室 ランチ デート</a>
+											<a class="badge badge-light" href="/%E4%BD%95-%E5%BA%A6-%E3%82%82-%E3%83%87%E3%83%BC%E3%83%88-%E3%81%97-%E3%81%A6%E3%82%8B-%E3%81%AE-%E3%81%AB.html">何 度 も デート し てる の に</a>
+											<a class="badge badge-info" href="/%E5%AE%A4%E5%86%85-%E9%81%8A%E3%81%B3%E5%A0%B4-%E6%9D%B1%E4%BA%AC-%E3%83%87%E3%83%BC%E3%83%88.html">室内 遊び場 東京 デート</a>
+											<a class="badge badge-light" href="/18%E6%AD%B3%E5%B9%B4%E4%B8%8A-%E3%83%87%E3%83%BC%E3%83%88.html">18歳年上 デート</a>
+						</div>
+<center>
+	<script type="text/javascript">
+	atOptions = {
+		'key' : 'a7e6ae4bcf1c49afa3b184d0c694ad6c',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://magnificentmanlyyeast.com/a7e6ae4bcf1c49afa3b184d0c694ad6c/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3DLaravel5.2%2520%25E6%2597%25A5%25E4%25BB%2598Validation%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Dd5b7bc28e772e6be58cf7a91e31e5fd0&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540ProjectEuropa%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D10c954c8c0f83b3b7af6f8bc345ae1d2&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=156f6e813c67cb961c88c070a2c0c55d" data-lightbox="roadtrip" data-title="Laravel5 2 日付validationのフォーマット Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3DLaravel5.2%2520%25E6%2597%25A5%25E4%25BB%2598Validation%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Dd5b7bc28e772e6be58cf7a91e31e5fd0&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540ProjectEuropa%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D10c954c8c0f83b3b7af6f8bc345ae1d2&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=156f6e813c67cb961c88c070a2c0c55d" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIxIII7Blmi_xxdOMq0cdPIP3pcIdS_c9iIdjvx1t970tuLMO8q_Xgphsp33yuqcubB8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravel5 2 日付validationのフォーマット Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ogimage.blog.st-hatena.com/12921228815733495094/8454420450096679206/1433586583" data-lightbox="roadtrip" data-title="Phpで日付フォーマットのチェック Takafumi Blog">
+						<img class="card-img" src="https://ogimage.blog.st-hatena.com/12921228815733495094/8454420450096679206/1433586583" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO55h61Q1sC3KwwMyx3J2JabcUCD6BJsGqtKaptnZ1_LuXvQJn9nsXVw0S8VHqWBaEOZU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Phpで日付フォーマットのチェック Takafumi Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ogimage.blog.st-hatena.com/12704830469096956320/12921228815713141034/1385399795" data-lightbox="roadtrip" data-title="Fuelphp1 6くらいで日付validation関数独自実装 Aswww Log">
+						<img class="card-img" src="https://ogimage.blog.st-hatena.com/12704830469096956320/12921228815713141034/1385399795" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8z1OoYLehDxREXHMYad-Nr-taBj47EVdVPAd1WnUZ8eT-YfjlYp5er-eJKmjyqKZfrE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fuelphp1 6くらいで日付validation関数独自実装 Aswww Log
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://camo.qiitausercontent.com/2466c5527e7659f865e92ab953ec20f868dae6d0/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3130383334352f65336565303030652d343263342d646139322d376232382d3731626630646131333563612e706e67" data-lightbox="roadtrip" data-title="Laravel5 日付入力のバリデーションはどう書くのが気持ちいいか Qiita">
+						<img class="card-img" src="https://camo.qiitausercontent.com/2466c5527e7659f865e92ab953ec20f868dae6d0/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3130383334352f65336565303030652d343263342d646139322d376232382d3731626630646131333563612e706e67" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCfsVRl7wpMc2Pj1KVlZ9orm8aLKO7Wbddlx2xIVmrU5NyR0vVjHGq5wO2yjDiUQ0I0g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravel5 日付入力のバリデーションはどう書くのが気持ちいいか Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/pointsandlines.jp/wp-content/uploads/2021/02/php_new.png?fit=640%2C443&amp;ssl=1" data-lightbox="roadtrip" data-title="Php 日付の形式 妥当性チェック Sample Points Lines">
+						<img class="card-img" src="https://i0.wp.com/pointsandlines.jp/wp-content/uploads/2021/02/php_new.png?fit=640%2C443&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtGZawVPxvvKOZbSdv3zJvfmVT24l39-xXzl_B2Cdua3jRdSBjOtUV4iXyckxIxz-ucM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php 日付の形式 妥当性チェック Sample Points Lines
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ogimage.blog.st-hatena.com/12704830469096956320/12921228815726294542/1402995666" data-lightbox="roadtrip" data-title="Fuelphp1 7で日付validation関数 Valid Date の使用とサンプル Aswww Log">
+						<img class="card-img" src="https://ogimage.blog.st-hatena.com/12704830469096956320/12921228815726294542/1402995666" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS2NgljzDRze0ztvb5kOHOTq8YVxrh1FAKROZEQ3Yf833JMWiLcL-q0wulFvTLjTwadpE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fuelphp1 7で日付validation関数 Valid Date の使用とサンプル Aswww Log
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b>Apr 19 2021 サインの日付は61.</b></h3>
+							<p class="p-2" align="justify">
+											<strong>Php 日付 バリデート</strong>. 
+					
+											バリラックス THE GARDEN梅田. 
+											25万パパ活5000万詐欺2股便器20時間SEX寝ころびデートセンター2日後に首www 61 名無し募集中 20210327土 00113580 0. 
+											20181025 二宮 健 プレイバックバリ神の島バリ島の今昔その4 20181010 公文敏雄 向陽プレスクラブ幹事会議事録 20181010 二宮 健 プレイバックバリ神の島バリ島の今昔その3 20180925 二宮 健 プレイバックバリ神の島バリ島の今昔その2. 
+									</p>
+							<p class="p-2" align="justify">
+					
+											テーブルオブジェクト がオブジェクトのコレクションへのアクセスを表し提供するのに対し エンティティーは個々の行やドメインオブジェクトを表します エンティティーは保持するデータにアクセスして 操作するための永続的なプロパティーと. 
+											はちみつロケットHachimitsu Rocket2014年 10月29日結成 - 2020年 4月26日解散同12月6日全活動終了 はスターダストプロモーション所属の女性タレントで結成されたSTARDUST PLANET通称スタプラの6人組の女性アイドルグループ 愛称ははちロケはちみつロケットのファンの方はロケッター. 
+											フィールドがdns_get_record PHP関数により有効なAかAAAAレコードであることをバリデートします after日付 フィールドの値が与えられた日付. 
+									</p>
+							<p class="p-2" align="justify">
+					
+											用途がイマイチよくわからない 風変わりなWeb APIをまとめてみました ジョーク系 Official Joke API ランダムなジョークを返してくれるAPI フリsetupとオチpunchlineにキー. 
+											2020年 大阪 東和薬品ractabドーム 1月11日土12日日満員御礼大盛況で閉幕 長野 長野ビッグハット 1月25日土26日日満員御礼. 
+									</p>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://gray-code.com/wp-content/uploads/2016/12/pic03.png" data-lightbox="roadtrip" data-title="入力値のバリデーション Graycode Phpプログラミング">
+						<img class="card-img" src="https://gray-code.com/wp-content/uploads/2016/12/pic03.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStzac4W3izoEXK1bhK5iw7OHLXrGe8Adlct2J953pJcWFn_2n7FSqweoyXcxAFiF0X2nQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				入力値のバリデーション Graycode Phpプログラミング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog.e2info.co.jp/wp-content/uploads/2018/10/datevalidation.png" data-lightbox="roadtrip" data-title="Laravelのカスタムバリデーションで日付の妥当性チェック ハマログ">
+						<img class="card-img" src="https://blog.e2info.co.jp/wp-content/uploads/2018/10/datevalidation.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS2YcOCbUbOTmQcwhSaHCkqgvzamJV6CA-4VedFYqQP2J_q6ryuRd7haCeqJ-2jSqI6A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravelのカスタムバリデーションで日付の妥当性チェック ハマログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://bashalog.c-brains.jp/images/category_cakephp.jpg" data-lightbox="roadtrip" data-title="Cakephpで日付のバリデーションが気になったので調べてみました バシャログ">
+						<img class="card-img" src="http://bashalog.c-brains.jp/images/category_cakephp.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS149qpYhVwkTNFjFNeyvBVzCZi2yuPZUgMhbalPe70yXpzVE1lzh-d4ZRYfSEOAIU0Vmo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cakephpで日付のバリデーションが気になったので調べてみました バシャログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.webdesign-fan.com/wp-content/uploads/2014/12/thumb_validation.png" data-lightbox="roadtrip" data-title="超簡単 フォームをリアルタイムで入力チェックする Jquery Validation Engine">
+						<img class="card-img" src="http://www.webdesign-fan.com/wp-content/uploads/2014/12/thumb_validation.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdQqebLyNPhTOJV0Z3fxehz8WJRhTxGHel60Yaxj1FN4HgLxAE2qfQqEXmDKqV5NpfMo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				超簡単 フォームをリアルタイムで入力チェックする Jquery Validation Engine
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gray-code.com/wp-content/uploads/2019/03/pic02-4.png" data-lightbox="roadtrip" data-title="投稿の未入力バリデーションをつける Graycode Phpプログラミング">
+						<img class="card-img" src="https://gray-code.com/wp-content/uploads/2019/03/pic02-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4HQfwi9I-5ToE9ZoUXKq3TjiNk-jPSD0T8U_4fP9iGORzaL_xX-aepcs5zY8Q60EW0Ks';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				投稿の未入力バリデーションをつける Graycode Phpプログラミング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/e0375c367881c849deadb1bb373586157a87a615/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fimages-fe.ssl-images-amazon.com%2Fimages%2FI%2F51M9CvLpz3L._SL160_.jpg" data-lightbox="roadtrip" data-title="Php Laravel バリデーション 開始と終了の日付バリデーション処理 １分技術ブログ">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/e0375c367881c849deadb1bb373586157a87a615/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fimages-fe.ssl-images-amazon.com%2Fimages%2FI%2F51M9CvLpz3L._SL160_.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL0dNuw-R0KZ6DVYFvhPVxB4OOkMYffDmqE5gbQRxBZnpw3QRH1JS83EFew6ppViAgLwc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php Laravel バリデーション 開始と終了の日付バリデーション処理 １分技術ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/pointsandlines.jp/wp-content/uploads/2020/05/calender.jpg?resize=640%2C427&amp;ssl=1" data-lightbox="roadtrip" data-title="Php 日付の形式 妥当性チェック Sample Points Lines">
+						<img class="card-img" src="https://i2.wp.com/pointsandlines.jp/wp-content/uploads/2020/05/calender.jpg?resize=640%2C427&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPScQxhlb-P4qQCJoNA3QlZz3biFT6Dckygq7urUHVTNdrOmfD1fR9m0BtAtA4l44TL1A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php 日付の形式 妥当性チェック Sample Points Lines
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sys-guard.com/contents/wp-content/uploads/2017/07/jqueryvalidation_20170712_1.png" data-lightbox="roadtrip" data-title="Jquery Validation 簡単にフォームをチェック バリデーション システムガーディアン株式会社">
+						<img class="card-img" src="https://sys-guard.com/contents/wp-content/uploads/2017/07/jqueryvalidation_20170712_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1rxPgPhIQfZ5pjZol5JpIwfZNZ_HBTXLrf6lQg0TZwVIBZZpyunWHwJIKuWQPTmOL1FY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Jquery Validation 簡単にフォームをチェック バリデーション システムガーディアン株式会社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://xakuro.com/medias/2019/09/mw-wp-form-maxcheckbox-rule.png" data-lightbox="roadtrip" data-title="Mw Wp Form のカスタムバリデーションルール Xakuro">
+						<img class="card-img" src="https://xakuro.com/medias/2019/09/mw-wp-form-maxcheckbox-rule.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgwl1j9IvwYnSJVplvKdhoiC24F9izeKGyuo8XlOoH_iVkfIQAgjBrFA2uDRJgCIwCErQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Mw Wp Form のカスタムバリデーションルール Xakuro
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://stat.ameba.jp/user_images/20130327/04/dantiv/17/af/j/o0567020212474970097.jpg?caw=800" data-lightbox="roadtrip" data-title="Jquery Validation でユーザーからの入力値を検証する Dantivのブログ">
+						<img class="card-img" src="https://stat.ameba.jp/user_images/20130327/04/dantiv/17/af/j/o0567020212474970097.jpg?caw=800" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnfSyatuIlG7DS9IYZcEvGHI5K02zg8tWnIIovaTBm7BpLToCsRLX_VqQQvhkYiAgcDLg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Jquery Validation でユーザーからの入力値を検証する Dantivのブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gray-code.com/wp-content/uploads/2019/03/pic01-5.png" data-lightbox="roadtrip" data-title="投稿の未入力バリデーションをつける Graycode Phpプログラミング">
+						<img class="card-img" src="https://gray-code.com/wp-content/uploads/2019/03/pic01-5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPXHuBInA-epJC6iGTg2qWx6_XeTv8WDdpWPJk6xOLLNrm_zzznl_lj2j-R_wU2Oim5Oc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				投稿の未入力バリデーションをつける Graycode Phpプログラミング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.hypertextcandy.com/posts/year-month-date-form-example-with-javascript-and-laravel/eye-catch.jpg" data-lightbox="roadtrip" data-title="Javascriptとlaravelで年月日の入力フォームを実装する Hypertext Candy">
+						<img class="card-img" src="https://cdn.hypertextcandy.com/posts/year-month-date-form-example-with-javascript-and-laravel/eye-catch.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ZvIkI44esqTUXFCGPnSM_MUQnCnUzRLF2pgxLs_IfmJOkErj5E081DDQVFIrwHKlH1s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Javascriptとlaravelで年月日の入力フォームを実装する Hypertext Candy
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kamonohashi.club/wp-content/uploads/2019/07/20190717_01_001.png" data-lightbox="roadtrip" data-title="Php 指定日時からn日前 N日後 来年などの日付を計算する プログラミングの足跡">
+						<img class="card-img" src="https://kamonohashi.club/wp-content/uploads/2019/07/20190717_01_001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNndRNCrwN0rxGjxqFpjix7DMu_Kq-TCC4wJU3YSZkXNncXtxyzIE-m02BNT3xtmOvtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php 指定日時からn日前 N日後 来年などの日付を計算する プログラミングの足跡
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hide_san99/20191029/20191029182225.jpg" data-lightbox="roadtrip" data-title="シンプルで使いやすい バリデーションライブラリ Valitron の使い方 Arms Inc Engineers Blog">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hide_san99/20191029/20191029182225.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2yQGETcuMdLChfk7jxm1QzQ0wR-kLeT5Oz67hpW2ZubApyU6_VIzsrlJ_mdDnqAqlQmQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				シンプルで使いやすい バリデーションライブラリ Valitron の使い方 Arms Inc Engineers Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s3.ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/column/1/521d6df779a2d5ad496bd155a6f20dc88cf75c7b.jpg" data-lightbox="roadtrip" data-title="Phpで日付の比較をするにはdatetimeクラスが便利 Tech Play Magazine テックプレイマガジン">
+						<img class="card-img" src="https://s3.ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/column/1/521d6df779a2d5ad496bd155a6f20dc88cf75c7b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8OkSWxaIrjm1VcyYFBx7mBHdSOnqFYPRcA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Phpで日付の比較をするにはdatetimeクラスが便利 Tech Play Magazine テックプレイマガジン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://res.cloudinary.com/code-kitchen/image/upload/c_lfill,w_1100/q_auto/v1581478915/posts/m8uuggpovgnvqnym7ln5.png" data-lightbox="roadtrip" data-title="Input Type Date で日付選択の入力欄を作る Htmlリファレンス">
+						<img class="card-img" src="https://res.cloudinary.com/code-kitchen/image/upload/c_lfill,w_1100/q_auto/v1581478915/posts/m8uuggpovgnvqnym7ln5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ5GJQr4oPA5xCALUlCOESpu4hP1guKxwahw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Input Type Date で日付選択の入力欄を作る Htmlリファレンス
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.larajapan.com/wp-content/uploads/2016/10/option_name.png" data-lightbox="roadtrip" data-title="バリデーション 連載 Page 2 ララジャパン">
+						<img class="card-img" src="https://www.larajapan.com/wp-content/uploads/2016/10/option_name.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREJPP8RQzou0RjDe3K0801ETcFOqIn227Hcg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				バリデーション 連載 Page 2 ララジャパン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://res.ionmo.ru/imgOIP.UeLBVp9YguHMD7hOqnvTdgHaC4" data-lightbox="roadtrip" data-title="Php フォーム 入力 チェック">
+						<img class="card-img" src="https://res.ionmo.ru/imgOIP.UeLBVp9YguHMD7hOqnvTdgHaC4" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4F8Oaq7JtWsLX5br37PQEdeahM6VCnb5Vw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php フォーム 入力 チェック
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E5%85%A5%E5%8A%9B+%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;tbm=isch" data-lightbox="roadtrip" data-title="3">
+						<img class="card-img" src="/search?q=%E5%85%A5%E5%8A%9B+%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E5%85%A5%E5%8A%9B+%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.casleyconsulting.co.jp/wordpress/wp-content/uploads/sites/12/2016/07/110_201607_html4.png" data-lightbox="roadtrip" data-title="Html5のフォームバリデーションに触れてみた キャスレーコンサルティング株式会社">
+						<img class="card-img" src="https://www.casleyconsulting.co.jp/wordpress/wp-content/uploads/sites/12/2016/07/110_201607_html4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRejfOos-Tneaof7igl4DEtjvkyIFG_CaTBBQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Html5のフォームバリデーションに触れてみた キャスレーコンサルティング株式会社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://codezine.jp/static/images/article/12329/12329_og.png" data-lightbox="roadtrip" data-title="Laravelにおけるバリデーションを理解しよう 1 2 Codezine コードジン">
+						<img class="card-img" src="https://codezine.jp/static/images/article/12329/12329_og.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSqNBgtu3J8QHrF2j8ShtUldbxKrTNAgYPQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravelにおけるバリデーションを理解しよう 1 2 Codezine コードジン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.larajapan.com/wp-content/uploads/2019/09/Laravel.png" data-lightbox="roadtrip" data-title="Vue Js バックエンドのバリデーションを使う ララジャパン">
+						<img class="card-img" src="http://www.larajapan.com/wp-content/uploads/2019/09/Laravel.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScL0DYjnGc3x_bitZMwThQXKKYp1xiM8SCRA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Vue Js バックエンドのバリデーションを使う ララジャパン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/special-moucom/20190818/20190818221213.png" data-lightbox="roadtrip" data-title="Laravel第4回目 フォーム バリデーション エラーメッセージ日本語化を学んだ話 Try T M Engineer Blog">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/special-moucom/20190818/20190818221213.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMu4JOI-8P8XRLXMviiEpWR2dIJ7_-KkIzxg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravel第4回目 フォーム バリデーション エラーメッセージ日本語化を学んだ話 Try T M Engineer Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s3.ap-northeast-1.amazonaws.com/ritolab.com/images/article/59575876b4551/41/f67b95d0aa52dd0c9f715d7f4a051f8a.png" data-lightbox="roadtrip" data-title="Laravelのvalidationメソッドでバリデーションを実装する入門編 日本語エラーメッセージ付き">
+						<img class="card-img" src="https://s3.ap-northeast-1.amazonaws.com/ritolab.com/images/article/59575876b4551/41/f67b95d0aa52dd0c9f715d7f4a051f8a.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_I3Yh7dcKUyLgPLdx2BuaHw4hBlptnPrZZA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Laravelのvalidationメソッドでバリデーションを実装する入門編 日本語エラーメッセージ付き
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog.ohgaki.net/wp-content/uploads/2016/07/Screenshot-from-2016-07-22-09-27-01.png" data-lightbox="roadtrip" data-title="バリデーションには3種類のバリデーションがある セキュアなアプリケーションの構造 Yohgaki S Blog">
+						<img class="card-img" src="https://blog.ohgaki.net/wp-content/uploads/2016/07/Screenshot-from-2016-07-22-09-27-01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1-Je_vQXb6QVix3h5cT6maNmHQpTmeI4qOw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				バリデーションには3種類のバリデーションがある セキュアなアプリケーションの構造 Yohgaki S Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pisuke-code.com/wp-content/uploads/2018/08/php.png" data-lightbox="roadtrip" data-title="Phpで文字列がurlかどうかチェックする２つの方法 Pisukecode Web開発まとめ">
+						<img class="card-img" src="https://pisuke-code.com/wp-content/uploads/2018/08/php.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTux1r7F0C36K1w7toWuD1i4GbAYLolC6qp5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Phpで文字列がurlかどうかチェックする２つの方法 Pisukecode Web開発まとめ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s3-ap-northeast-1.amazonaws.com/samurai-blog-media/blog/wp-content/uploads/2017/09/image-41.jpg" data-lightbox="roadtrip" data-title="Php入門 数値や時刻などの表現を正規表現でチェックする 侍エンジニアブログ">
+						<img class="card-img" src="https://s3-ap-northeast-1.amazonaws.com/samurai-blog-media/blog/wp-content/uploads/2017/09/image-41.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuQuLwuzUQJwteZ4oNFY-J9x0BwgNHFUUoXw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Php入門 数値や時刻などの表現を正規表現でチェックする 侍エンジニアブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		<div class="d-block mt-4 p-3">
+
+			Source : <a href="https://pinterest.com" rel="nofollow noopener">pinterest.com</a>
+		</div>
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			</body>
+</html>
